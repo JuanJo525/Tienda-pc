@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tienda Online Pascual Bravo</h1>
+    </header>
+
+    <main>
+      <!-- Lista -->
+      <section id="product-list" aria-labelledby="productos-titulo">
+        <h2 id="productos-titulo">Productos</h2>
+
+        <!-- Campo  -->
+        <div class="search-container">
+          <label for="search" id="search-label">Buscar producto:</label>
+          <input
+            type="text"
+            id="search"
+            aria-describedby="search-label"
+            placeholder="Escribe para filtrar productos"
+          />
+        </div>
+
+        <div id="products" class="products-container" role="list"></div>
+      </section>
+
+      <!-- Carrito  -->
+      <section id="cart" aria-labelledby="carrito-titulo">
+        <h2 id="carrito-titulo">Carrito de Compras</h2>
+        <div
+          id="cart-items"
+          aria-live="polite"
+          aria-atomic="true"
+          class="cart-items"
+        ></div>
+
+        <div id="cart-total">
+          <h3>Total: $<span id="total-price">0</span></h3>
+          <button id="checkout-btn" aria-label="Finalizar compra">
+            Finalizar Compra
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Proyecto académico - Institución Universitaria Pascual Bravo</p>
+    </footer>
+
+
+
+    <div id="menu-contextual" 
+     style="display:none; position:absolute; background:white; border:1px solid #ccc; padding:5px; z-index:1000;">
+    <button id="opcion-eliminar">Eliminar</button>
+    <button id="opcion-cantidad">Cambiar cantidad</button>
+</div>
+    <script src="script.js"></script>
+  </body>
+</html>
